@@ -21,22 +21,22 @@
         <scoped_administration>false</scoped_administration>
         <short_description>githubactiondemo2</short_description>
         <source>800e96ea1b64e090fe0165f8bc4bcbc4</source>
-        <store_correlation_id>REPOAPP0000002409</store_correlation_id>
+        <store_correlation_id>REPOAPP0000002487</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>chiarng.lin@servicenow.com</sys_created_by>
         <sys_created_on>2020-11-21 05:47:16</sys_created_on>
         <sys_id>800e96ea1b64e090fe0165f8bc4bcbc4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>demoserviceaccount</sys_updated_by>
-        <sys_updated_on>2020-11-21 05:58:55</sys_updated_on>
+        <sys_updated_on>2020-11-24 20:20:22</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>2.4.3</version>
+        <version>2.4.5</version>
     </sys_app>
 </record_update>
