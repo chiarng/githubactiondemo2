@@ -33,14 +33,9 @@ jobs:
           snowPassword: ${{ secrets.SN_PASSWORD }}
           snowSourceInstance: ${{ secrets.SN_DEV_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
-       
-      - id: version
-        run: |
-          # use bash variable expression to get the substring
-          export PUBLISH_VERSION="${{ steps.publish_app.outputs.newVersion }}"
-          echo "::set-output name=publishversion::${PUBLISH_VERSION}"
+
     outputs:
-      publishversion: ${{ steps.version.outputs.publishversion }}
+      publishversion: ${{ steps.publish_app.outputs.newVersion }}
 
   test:
     needs: build
@@ -81,13 +76,8 @@ jobs:
           snowInstallInstance: ${{ secrets.SN_TEST_INSTANCE }}
           appSysID: ${{ secrets.SN_APP_SYSID }}
 
-      - id: version
-        run: |
-          # use bash variable expression to get the substring
-          export PUBLISH_VERSION="${{ needs.build.outputs.publishversion }}"
-          echo "::set-output name=publishversion::${PUBLISH_VERSION}"
     outputs:
-      publishversion: ${{ steps.version.outputs.publishversion }}
+      publishversion: ${{ needs.build.outputs.publishversion }}
 
   deployprod:
     needs: test
